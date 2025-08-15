@@ -479,5 +479,60 @@ header .song_side nav .user{
    height: 150px;
    margin-top: 15px;
    display: flex;
-   border: 1px solid white;
+   /*border: 1px solid white;*/
+   overflow: auto;
+   scroll-behavior: smooth;
+ }
+ header .song_side .popular_song .amapiano_song::-webkit-scrollbar{
+   display: none;
+ }
+ header .song_side .popular_song .amapiano_song li{
+   min-width: 100px;
+   height: 140px;
+   list-style-type: none;
+   margin-right: 10px;
+   transition: .3s linear;
+ }
+ header .song_side .popular_song .amapiano_song li:hover{
+   background: rgba(123, 72, 34, 0.418);
+   
+ }
+  header .song_side .popular_song .amapiano_song li .img_play{
+   
+   position:  relative;
+   width: 100px;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ }
+ header .song_side .popular_song .amapiano_song li .img_play img{
+   width: 100px;
+   height: 100px;
+ }
+ header .song_side .popular_song .amapiano_song li .img_play .bi{
+   position: absolute;
+   font-size: 20px;
+   cursor: pointer;
+   transition: .3s linear;
+   opacity: 0;
+ }
+ header .song_side .popular_song .amapiano_song li:hover .img_play .bi{
+   opacity: 2;
+ }
+ header .song_side .popular_song .amapiano_song li h3{
+   font-size: 10px;
+   width: 100px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   padding: 5px 0 0 5px;
+ }
+ header .song_side .popular_song .amapiano_song li h3 .subtitle{
+   font-size: 8px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   color: rgb(173, 96, 38);
  }
