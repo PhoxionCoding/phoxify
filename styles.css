@@ -1,0 +1,483 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(165, 95, 42);
+    display: grid;
+    place-items: center;
+}
+header{
+    width: 85%;
+    height: 95%;
+    /*border: 1px solid white;*/
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+header .menu_side, .song_side{
+    width: 25%;
+    height: 90%;
+    /*border: 1px solid white;*/
+    background: rgb(123, 73, 34);
+    color: #3e2305;
+    border-bottom: 1px solid #3e2305;
+}
+header .song_side{
+    width: 75%;
+    background: rgba(68, 39, 5, 0.904);
+    color: rgb(231, 127, 8);
+    box-shadow: 5px 8px 8px rgb(123, 73, 34);
+    
+}
+
+header .play_master{
+    width: 100%;
+    height: 10%;
+    background: rgb(165, 95, 42);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 5px 8px 8px rgb(123, 73, 34);
+}
+header .menu_side h1{
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+}
+header .playlist{
+    margin: 15px 0px 0px 40px;
+}
+header .playlist h2{
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: rgb(165, 99, 42);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3 linear;
+}
+header .playlist h2:hover{
+    color: rgb(231, 127, 8);
+}
+header .menu_side .playlist h2 span{
+    position: relative;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+header .menu_side .playlist h2 span::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid rgb(165, 99, 42);
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+header .menu_side .playlist h2:hover span::before{
+    border: 2px solid white;
+}
+header .menu_side .playlist .active{
+    color: rgb(68, 39, 5);
+    transition: .3s linear;
+
+}
+header .menu_side .playlist .active:hover{
+    color: rgb(231, 127, 8);
+    
+}
+header .menu_side .menu_song{
+    width: 100%;
+    height: 300px;
+    /*border: 1px solid white;*/
+    margin-top: 40px;
+    overflow:auto;
+
+}
+header .menu_side .menu_song::-webkit-scrollbar{
+   background-color: rgb(231, 127, 8);
+   color: #3e2305;
+
+}
+header .menu_side .menu_song li{
+   list-style-type: none;
+   position: relative;
+   padding: 5px 0px 5px 20px;
+   display: flex;
+   align-items: center; 
+   margin-bottom: 10px;
+   cursor: pointer;
+   transition: 0.3 linear;
+
+}
+header .menu_side .menu_song li:hover{
+    background: rgb(231, 127, 8);
+ 
+ }
+ header .menu_side .menu_song li span{
+    font-size: 12px;
+    font-weight: 600;
+    color:rgb(173, 96, 38);
+ 
+ }
+ header .menu_side .menu_song li img{
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    margin-right: 10px;
+ 
+ }
+ header .menu_side .menu_song li h3{
+    font-size: 10px;
+    width: 170px;
+    /*border: 1px solid white;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ }
+ header .menu_side .menu_song li h3 .subtitle{
+    font-size: 9px;
+    color: rgb(173, 96, 38);
+    
+ }
+ header .play_master{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+ }
+ header .play_master .wave{
+    width: 30px;
+    height: 30px;
+    /*border: 1px solid white;*/
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+ }
+ header .play_master .wave .wave1 {
+    width: 3px;
+    height: 10px;
+    background:  #3e2305;
+    margin-right: 3px;
+    border-radius: 10px 10px 0px 0px;
+    animation: wave 0.5s linear infinite;
+ }
+ header .play_master .wave .wave1:nth-child(2){
+    height: 13px;
+    margin-right: 3.5px;
+    animation-delay: 0.4s;
+ }
+ header .play_master .wave .wave1:nth-child(3){
+    height: 8px;
+    animation-delay: 0.8s;
+ }
+ @keyframes wave{
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+ }
+ header .play_master img{
+    width: 35px;
+    height: 35px;
+ }
+ header .play_master h3{
+    width: 130px;
+    /*border: 1px solid white;*/
+    margin-left: 15px;
+    color:#281500;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+ }
+ header .play_master h3 .subtitle{
+    color:#3e2305;
+    font-size: 11px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ }
+ header .play_master .icon{
+    font-size: 20px;
+    margin: 0px 20px 0px 40px;
+    outline: none;
+    display: flex;
+    align-items: center;
+ }
+ header .play_master .icon .bi{
+    cursor: pointer;
+    outline: none;
+ }
+ header .play_master .icon .shuffle{
+    font-size: 17px;
+    margin-right: 10px;
+    width: 17.5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  header .play_master .icon .bi:nth-child(3){
+   border: 1px solid rgb(68, 39, 5 .1) ;
+   border-radius: 50%;
+   padding: 1px 5px 0px 7px;
+   margin: 0px 5px;
+
+}
+header .play_master span{
+    color:#281500;
+    width: 32px;
+    /*border: 1px solid white;*/
+    font-size: 11px;
+    font-weight: 400;
+ }
+ header .play_master #currentStart{
+    margin: 0px 0px 0px 20px;
+  
+ }
+ header .play_master .bar{
+    position: relative;
+    width: 43%;
+    height: 2px;
+    background: rgb(231, 127, 8);
+    margin: 0px 15px 0px 10px;
+ }
+ header .play_master .bar .bar2{
+    position: absolute;
+    background: #281500;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition:  1s linear;
+ }
+ header .play_master .bar .dot{
+    position: absolute;
+    width:5px;
+    height: 5px;
+    background: #281500;
+    border-radius: 50%;
+    left: 0%;
+    top: -1.5px;
+    transition:  1s linear;
+ }
+ header .play_master .bar .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(68, 39, 5);
+    border-radius: 50%;
+    left: -7px;
+    top: -6.5px;
+    box-shadow: inset 0px 0px 3px #281500;
+ }
+ header .play_master .bar input{
+    position: absolute;
+    width: 100%;
+    top: -7px;
+    left: 0;
+    cursor: pointer;
+    z-index: 9999999999999999999999999;
+    /*transition: 3s linear;*/
+    opacity: 0;
+    
+ }
+ header .play_master .vol{
+   position: relative;
+   width: 100px;
+   height: 2px;
+   background: rgb(231, 127, 8);
+   margin-left: 50px;
+}
+header .play_master .vol .bi{
+   position: absolute;
+   color: #281500;
+   font-size: 25px;
+   top: -11px;
+   left: -30px;
+}
+header .play_master .vol input{
+   position: absolute;
+   width: 100%;
+   top: -6px;
+   left: 0;
+   cursor: pointer;
+   z-index: 99999999999999999999999999999999;
+   opacity: 0 ;
+}
+header .play_master .vol .vol_bar{
+   position: absolute;
+   background: #281500;
+   width: 50%;
+   height: 100%;
+   top: 0;
+   transition: 1s linear;
+
+}
+header .play_master .vol .dot{
+   position: absolute;
+   width:5px;
+   height: 5px;
+   background: #281500;
+   border-radius: 50%;
+   left: 0%;
+   top: -1.5px;
+   transition:  1s linear;
+
+}
+header .play_master .vol .dot::before{
+   content: '';
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   border: 1px solid rgb(68, 39, 5);
+   border-radius: 50%;
+   left: -7px;
+   top: -6.5px;
+   box-shadow: inset 0px 0px 3px #281500;
+}
+header .song_side nav{
+   width: 90%;
+   height: 10%;
+   /*border: 1px solid white;*/
+   margin: auto;
+   display: flex;
+   align-items: center; 
+}
+header .song_side nav ul {
+   display: flex;
+   margin-right: 210px;
+}
+header .song_side nav ul li{
+   list-style: none;
+   position: relative;
+   font-size: 13px;
+   color:  rgb(165, 95, 42);
+   margin-right: 25px;
+   cursor: pointer;
+   transition: .3s linear;
+}
+header .song_side nav ul li:hover{
+   color: rgb(231, 127, 8);
+}
+header .song_side nav ul li:nth-child(1){
+    color: rgb(231, 127, 8);
+}
+header .song_side nav ul li span{
+   position: absolute;
+   width: 100%;
+   height: 2.5px;
+   bottom: -5px;
+   background: rgb(165, 95, 42);
+   left: 0;
+   border-radius: 20px;
+    
+}
+header .song_side nav .search{
+   position: relative;
+   width: 40%;
+   padding: 1px 10px;
+   background:rgba(123, 72, 34, 0.418);
+   border-radius: 20px;
+   /*border: 1px solid white;*/
+   color:rgb(165, 95, 42);
+   backdrop-filter: blur(5px);
+}
+header .song_side nav .search input{
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 0px 10px;
+}
+header .song_side nav .user{
+   position: relative;
+   width: 30px;
+   height: 30%;
+   /*border: 1px solid white;*/
+   border-radius: 50%;
+   margin-left: 15px;
+  
+ }
+ header .song_side nav .user img{
+   width: 100%;
+   height: 100;
+   border-radius: 50%;
+ }
+ header .song_side .content{
+   width: 90%;
+   height: 30%;
+   /*border: 1px solid white;*/
+   margin: auto;
+   background:rgba(68, 39, 5,0.5);
+   border-radius: 5px;
+ }
+ header .song_side .content h1{
+   font-size: 25px;
+   font-weight: 600;
+   color:  rgb(231, 127, 8);
+ }
+ header .song_side .content p{
+   font-size: 11px;
+   font-weight: 400;
+   color: rgb(165, 95, 42);
+   margin: 5px  ;
+ }
+ header .song_side .content .buttons {
+   margin-top: 15px;
+ }
+ header .song_side .content .buttons button{
+   width: 130px;
+   height: 30px;
+   border: 1px solid #3e2305; 
+   outline: none;
+   border-radius: 20px;
+   background:rgb(68, 39, 5); 
+   color: rgb(231, 127, 8);
+   cursor: pointer;
+   transition: .3s linear;
+ }
+ header .song_side .content .buttons button:hover{
+   color: rgb(68, 39, 5);
+   background:rgb(231, 127, 8);
+   border: nones;
+ }
+ header .song_side .popular_song{
+   width:90%;
+   height: auto;
+   margin: auto;
+   margin-top: 15px  ;
+   /*border: 1px solid white;*/
+ }
+ header .song_side .popular_song .h4{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ header .song_side .popular_song .h4 .bi{
+   color:rgba(231, 127, 8, 0.552);
+   cursor: pointer;
+   transition: .3s linear;
+ }
+ header .song_side .popular_song .h4 .bi:hover{
+   color:rgb(231, 127, 8);
+ }
+ header .song_side .popular_song .amapiano_song{
+   width: 100%;
+   height: 150px;
+   margin-top: 15px;
+   display: flex;
+   border: 1px solid white;
+ }
